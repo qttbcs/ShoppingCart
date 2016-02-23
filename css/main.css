@@ -469,7 +469,7 @@ ul.sub-menu {
   padding-left: 100px;
 }
 
-.girl {
+.banner {
   margin-left: 0;
 }
 
@@ -707,6 +707,15 @@ h2.title:before{
   padding-right: 0;
 }
 
+.content-welcome{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border:1px solid #F7F7F5;
+}
+
+.features_brands,
 .features_items{
 	overflow:hidden;
 }
@@ -870,34 +879,6 @@ h2.title {
 	color:#3498DB;
 }
 
-.category-tab {
-  overflow: hidden;
-}
-
-.category-tab ul {
-  background: #40403E;
-  border-bottom: 1px solid #3498DB;
-  list-style: none outside none;
-  margin: 0 0 30px;
-  padding: 0;
-  width: 100%;
-}
-
-.category-tab ul li a {
-  border: 0 none;
-  border-radius: 0;
-  color: #B3AFA8;
-  display: block;
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px;
-  text-transform: uppercase;
-}
-
-.category-tab ul  li  a:hover{
-	background:#3498DB;
-	color:#fff;
-}
-
 .nav-tabs  li.active  a, .nav-tabs  li.active  a:hover, .nav-tabs  li.active  a:focus {
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
@@ -922,6 +903,7 @@ h2.title {
   overflow: hidden;
 }
 
+#features-brands-carousel .carousel-inner .item,
 #recommended-item-carousel .carousel-inner .item {
   padding-left: 0;
 }
@@ -940,9 +922,6 @@ h2.title {
 
 .recommended-item-control i:hover {
   background: #ccccc6;
-}
-
-.recommended_items  h2 {
 }
 
 .our_partners{

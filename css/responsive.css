@@ -50,7 +50,7 @@
 	font-size: 24px;
 }
 
-.girl{
+.banner{
 	margin-left: 0;
 }
 
@@ -261,10 +261,6 @@ ul.sub-menu{
 	font-size: 20px;
 }
 
-.category-tab ul li a{
-	font-size: 12px;
-}
-
 .footer-bottom p{
 	font-size: 13px;
 	text-align: center;
@@ -287,10 +283,6 @@ ul.sub-menu{
 
 .features_items{
 	margin-top: 30px;
-}
-
-.category-tab .nav-tabs li{
-	float: none;
 }
 
 #similar-product .carousel-inner .item img{
