@@ -19,10 +19,6 @@
 	width: 100%;
 }
 
-#similar-product .carousel-inner .item img{
-	width: 65px;
-}
-
 #cart_items .cart_info .cart_description h4, 
 #cart_items .cart_info .cart_description p{
 	text-align: center;
@@ -70,11 +66,6 @@
 	width: 50%;
 	display: inline-block;
 	margin-bottom: 50px;
-}
-
-#similar-product .carousel-inner .item img{
-	width: 60px;
-	margin-left: 0;
 }
 
 .product-information span span{
@@ -211,10 +202,6 @@ ul.sub-menu{
 	display: block;
 }
 
-#similar-product {
-	margin-bottom: 40px;
-}
-
 .well{
 	display: inline-block;
 }
@@ -285,16 +272,8 @@ ul.sub-menu{
 	margin-top: 30px;
 }
 
-#similar-product .carousel-inner .item img{
-	margin-left: 4px;
-}
-
 .product-information{
 	margin-top: 40px;
-}
-
-#reviews p, .blog-post-area .single-blog-post p{
-	text-align: justify;
 }
 
 #reviews form span input{
@@ -304,14 +283,6 @@ ul.sub-menu{
 
 #reviews form span input:last-child{
 	margin-left: 0;
-}
-
-.blog-post-area .single-blog-post h3{
-	font-size: 14px;
-}
-
-.blog-post-area .post-meta ul li{
-	margin-right: 7px;
 }
 
 .shipping{
