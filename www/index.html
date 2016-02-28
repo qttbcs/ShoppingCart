@@ -6,13 +6,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Shopping-Cart</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/price-range.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/responsive.css" rel="stylesheet">
+    <link href="lib/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/FontAwesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/jquery/css/prettyPhoto.css" rel="stylesheet">
+    <link href="lib/jquery/css/price-range.css" rel="stylesheet">
+    <link href="lib/jquery/css/animate.css" rel="stylesheet">
+    <link href="scss/main.css" rel="stylesheet">
+    <link href="scss/responsive.css" rel="stylesheet">
     <link href="/favicon.ico" rel="shortcut icon">
 </head><!--/head-->
 
@@ -76,7 +76,7 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="logo">
-                            <a href="#"><img src="images/home/logo.png" alt="" /></a>
+                            <a href="#"><img src="assets/images/home/logo.png" alt="" /></a>
                         </div>
                     </div>
                     <div class="col-sm-6">
@@ -102,34 +102,34 @@
                     <div class="mainmenu">
                         <ul class="nav navbar-nav collapse navbar-collapse">
                             <li class="dropdown">
-                                <a > Computers<i class="fa fa-angle-down"></i></a>
+                                <a> Computers<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="#/shop">Desktops</a></li>
-                                    <li><a href="#/shop">Notebooks</a></li>
-                                    <li><a href="#/shop">Software</a></li>
+                                    <li><a href="#/shop/Desktops">Desktops</a></li>
+                                    <li><a href="#/shop/Notebooks">Notebooks</a></li>
+                                    <li><a href="#/shop/Software">Software</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a > Electronics<i class="fa fa-angle-down"></i></a>
+                                <a> Electronics<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="#/shop">Camera</a></li>
-                                    <li><a href="#/shop">Cell phones</a></li>
-                                    <li><a href="#/shop">Others</a></li>
+                                    <li><a href="#/shop/Camera">Camera</a></li>
+                                    <li><a href="#/shop/CellPhones">Cell phones</a></li>
+                                    <li><a href="#/shop/Others">Others</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a > Apparel<i class="fa fa-angle-down"></i></a>
+                                <a> Apparel<i class="fa fa-angle-down"></i></a>
                                 <ul role="menu" class="sub-menu">
-                                    <li><a href="#/shop">Shoes</a></li>
-                                    <li><a href="#/shop">Clothing</a></li>
-                                    <li><a href="#/shop">Accessories</a></li>
+                                    <li><a href="#/shop/Shoes">Shoes</a></li>
+                                    <li><a href="#/shop/Clothing">Clothing</a></li>
+                                    <li><a href="#/shop/Accessories">Accessories</a></li>
                                 </ul>
                             </li>
 
-                            <li class="dropdown"><a href="#/shop"> Digital downloads</a></li>
-                            <li class="dropdown"><a href="#/shop"> Books</a></li>
-                            <li class="dropdown"><a href="#/shop"> Jewelry</a></li>
-                            <li class="dropdown"><a href="#/shop"> Gift Cards</a></li>
+                            <li class="dropdown"><a href="#/shop/Digital"> Digital downloads</a></li>
+                            <li class="dropdown"><a href="#/shop/Books"> Books</a></li>
+                            <li class="dropdown"><a href="#/shop/Jewelry"> Jewelry</a></li>
+                            <li class="dropdown"><a href="#/shop/GiftCards"> Gift Cards</a></li>
 
                         </ul>
                     </div>
@@ -237,19 +237,19 @@
     </footer><!--/Footer-->
 
     <!-- jQuery, Angular -->
-    <script src="js/jquery.js"></script>
-    <script src="js/angular.js"></script>
-    <script src="js/angular-route.js"></script>
+    <script src="lib/jquery/js/jquery.js"></script>
+    <script src="lib/Angular/angular.js"></script>
+    <script src="lib/Angular/angular-route.js"></script>
 
     <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="lib/Bootstrap/js/bootstrap.min.js"></script>
 
     <!-- ShoppingCart app -->
-    <script src="js/app/jquery.scrollUp.min.js"></script>
-    <script src="js/app/price-range.js"></script>
-    <script src="js/app/jquery.prettyPhoto.js"></script>
-    <script src="js/app/main.js"></script>
-    <script src="js/app/myApp.js"></script>
-    <script src="js/app/controllers.js"></script>
+    <script src="lib/jquery/js/jquery.scrollUp.min.js"></script>
+    <script src="lib/jquery/js/price-range.js"></script>
+    <script src="lib/jquery/js/jquery.prettyPhoto.js"></script>
+    <script src="lib/jquery/js/main.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
 </body>
 </html>
