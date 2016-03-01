@@ -1,24 +1,32 @@
-var shoppingApp = angular.module('shoppingApp', ['ngRoute', 'shoppingCartControllers']);	
-shoppingApp.config(['$routeProvider',
-    function($routeProvider) {
-        $routeProvider.
-        when('/home', {
-            templateUrl: 'js/pages/home/home.html',
-            controller: 'HomeCtrl'
-        }).
-         when('/shop/:category', {
-             templateUrl: 'js/pages/shop/shop.html',
-             controller: 'ProductCtrl'
-         }).
-        when('/shop/:category/:idProduct', {
-            templateUrl: 'js/pages/product-details/product-details.html',
+
+'use strict';
+
+var shoppingApp = angular.module('shoppingApp', ['ui.router', 'cart']);
+shoppingApp.config(function ($stateProvider, $urlRouterProvider) {
+    //$urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.when('', '/home');
+    $stateProvider
+        .state('home', {
+            url: '/home',
+            templateUrl: 'js/pages/home/index.html'
+
+        })
+        .state('productCategory', {
+            url: '/product/:category',
+            templateUrl: 'js/pages/products/list.html',
             controller: 'ProductCtrl'
-        }).
-        when('/cart', {
+
+        })
+        .state('productDetail', {
+            url: '/product/:category/:idProduct',
+            templateUrl: 'js/pages/products/detail.html',
+            controller: 'ProductCtrl'
+
+        })
+        .state('shoppingCart', {
+            url: '/cart',
             templateUrl: 'js/pages/shopping-cart/shopping-cart.html',
-            controller: 'PhoneListCtrl'
-        }).
-        otherwise({
-          redirectTo: '/home'
-        });
-    }]);
+            controller: 'CartCtrl'
+
+        })
+})

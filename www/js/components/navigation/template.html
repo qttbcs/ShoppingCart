@@ -1,0 +1,49 @@
+﻿<div class="header-menu">
+    <!--header-menu-->
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="mainmenu">
+                <ul class="nav navbar-nav collapse navbar-collapse">
+                    <li class="dropdown">
+                        <a> Computers<i class="fa fa-angle-down"></i></a>
+                        <ul role="menu" class="sub-menu">
+                            <li><a ui-sref="productCategory({ category: 'Desktops' })" ui-sref-active="active">Desktops</a></li>
+                            <li><a ui-sref="productCategory({ category: 'Notebooks' })" ui-sref-active="active">Notebooks</a></li>
+                            <li><a ui-sref="productCategory({ category: 'Software' })" ui-sref-active="active">Software</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a> Electronics<i class="fa fa-angle-down"></i></a>
+                        <ul role="menu" class="sub-menu">
+                            <li><a ui-sref="productCategory({ category: 'Camera' })" ui-sref-active="active">Camera</a></li>
+                            <li><a ui-sref="productCategory({ category: 'CellPhones' })" ui-sref-active="active">Cell phones</a></li>
+                            <li><a ui-sref="productCategory({ category: 'Others' })" ui-sref-active="active">Others</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a> Apparel<i class="fa fa-angle-down"></i></a>
+                        <ul role="menu" class="sub-menu">
+                            <li><a ui-sref="productCategory({ category: 'Shoes' })" ui-sref-active="active">Shoes</a></li>
+                            <li><a ui-sref="productCategory({ category: 'Clothing' })" ui-sref-active="active">Clothing</a></li>
+                            <li><a ui-sref="productCategory({ category: 'Accessories' })" ui-sref-active="active">Accessories</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a ui-sref="productCategory({ category: 'Digital' })" ui-sref-active="active"> Digital downloads</a></li>
+                    <li class="dropdown"><a ui-sref="productCategory({ category: 'Books' })" ui-sref-active="active"> Books</a></li>
+                    <li class="dropdown"><a ui-sref="productCategory({ category: 'Jewelry' })" ui-sref-active="active"> Jewelry</a></li>
+                    <li class="dropdown"><a ui-sref="productCategory({ category: 'GiftCards' })" ui-sref-active="active"> Gift Cards</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> <!--header-menu-->

@@ -1,0 +1,57 @@
+﻿<header id="header">
+    <!--header-->
+    <div class="header-top">
+        <!--header-top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="currency-selector">
+                        <select name="customerCurrency" onchange="setLocation(this.value);">
+                            <option selected="selected" value="/changecurrency/1?returnurl=%2fcomputers">US Dollar</option>
+                            <option value="/changecurrency/6?returnurl=%2fcomputers">Euro</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <div class="shop-menu pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-cog"></i> Register</a></li>
+                            <li><a href="#"><i class="fa fa-power-off"></i> Log in</a></li>
+                            <li>
+                                <a href="#" class="ico-wishlist">
+                                    <span class="cart-label"><i class="fa fa-star"></i> Wishlist</span>
+                                    <span class="wishlist-qty">(0)</span>
+                                </a>
+                            </li>
+                            <li id="topcartlink">
+                                <a ui-sref="shoppingCart" class="ico-cart">
+                                    <span class="cart-label"><i class="fa fa-shopping-cart"></i> Shopping cart</span>
+                                    <mycart></mycart>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>                       
+                            </li>                      
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-top-->
+    <div class="header-bottom">
+        <!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="logo">
+                        <a ui-sref="home"><img src="assets/images/home/logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="search_box pull-right">
+                        <input type="text" placeholder="Search store" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--/header-bottom-->
+    <mynavigation></mynavigation>
+</header><!--/header-->
