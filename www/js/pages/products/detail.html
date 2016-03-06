@@ -3,7 +3,7 @@
         <div class="breadcrumbs">
             <ol class="breadcrumb">
                 <li><a href="#" ui-sref="home">Home</a></li>
-                <li><a href="#" ui-sref="productCategory({ category: product.Category })">{{category}}</a></li>
+                <li><a href="#" ui-sref="productCategory({ category: category })">{{category}}</a></li>
                 <li class="active">{{product.Name}}</li>
             </ol>
         </div>
@@ -13,39 +13,8 @@
             </div>
 
             <div class="col-sm-9 padding-right">
-                <div class="product-details">
-                    <!--product-details-->
-                    <div class="col-sm-5">
-                        <div class="view-product">
-                            <img src="{{product.LinkImage}}" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-sm-7">
-                        <div class="product-information">
-                            <!--/product-information-->
-                            <img src="assets/images/product-details/new.jpg" class="newarrival" alt="" />
-                            <h2>{{product.Name}}</h2>
-                            <p>Web ID: {{product.Id}}</p>
-                            <img src="assets/images/product-details/rating.png" alt="" />
-                            <span>
-                                <span>US ${{product.Price}}</span>
-                                <label>Quantity:</label>
-                                <input type="number" value="1" min="1" max="10" ng-model="product.Count"/>
-                                <button ng-click="addItemToCart(product)" type="button" class="btn btn-fefault cart">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    Add to cart
-                                </button>
-                            </span>
-                            <p><b>Availability:</b> {{product.Availability}}</p>
-                            <p><b>Condition:</b> {{product.Condition}}</p>
-                            <p><b>Brand:</b> {{product.Brand}}</p>
-                            <p><b>Description:</b> {{product.Description}}</p>
-
-                        </div><!--/product-information-->
-                    </div>
-                </div><!--/product-details-->
-
-                <recommendeditems></recommendeditems>
+               <productdetails data="product"></productdetails>
+                <recommendeditems title="{{category}}" data="products"></recommendeditems>
 
             </div>
         </div>

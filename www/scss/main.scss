@@ -1,0 +1,6 @@
+﻿// Include common styles of whole app
+/*@import "www/scss/common";*/
+
+// Include specific styles of each view
+@import "scss/views/home";
+@import "scss/views/product";

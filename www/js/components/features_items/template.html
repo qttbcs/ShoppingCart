@@ -1,0 +1,32 @@
+﻿<div class="features_items">
+    <!--features_items-->
+    <h2 class="title text-center" ng-bind="title"></h2>
+    <div ng-repeat="product in data">
+        <div class="col-sm-4">
+            <div class="product-image-wrapper">
+                <div class="single-products">
+                    <div class="productinfo text-center">
+                        <img src="{{product.LinkImage}}" alt="" />
+                        <h2>${{product.Price}}</h2>
+                        <p>{{product.Name}}</p>
+                        <a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </div>
+                    <div class="product-overlay">
+                        <div class="overlay-content">
+                            <h2>${{product.Price}}</h2>
+                            <a ui-sref="productDetail({ category: title, idProduct: product.Id })"><p>{{product.Name}}</p></a>
+                            <a ng-click="addItemToCart(product)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                        </div>
+                    </div>
+                    <img ng-src="assets/images/home/{{product.Condition}}.png" class="new" alt="" />
+                </div>
+                <div class="choose">
+                    <ul class="nav nav-pills nav-justified">
+                        <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
+                        <li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--features_items-->

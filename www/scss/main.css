@@ -767,6 +767,9 @@ h2.title {
   font-size: 14px;
   font-weight: 400;
   color: #696763;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .productinfo img{
@@ -823,7 +826,10 @@ h2.title {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #fff;
+  color: #696763;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -1369,6 +1375,7 @@ h2.title {
 .cart_info table tr td {
   border-top: 0 none;
   vertical-align: inherit;
+  margin-right: auto;
 }
 
 

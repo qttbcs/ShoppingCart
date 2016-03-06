@@ -1,24 +1,46 @@
-shoppingApp.controller('ProductCtrl', ['REST_API', '$scope', '$http', '$stateParams', 'cart',
-    function (REST_API, $scope, $http, $stateParams, cart) {
-      $scope.category = $stateParams.category;
-      $scope.idProduct = $stateParams.idProduct;
+shoppingApp.controller('ProductCtrl', ['$scope', '$stateParams', 'storeService',
+    function ($scope, $stateParams, store) {
+        $scope.category = $stateParams.category;    
+        $scope.idProduct = $stateParams.idProduct;
+        $scope.products = [];
 
-      $http.get(REST_API.HOST + REST_API.METHOD.GET_CATEGORY + $scope.category).success(function (data) {
-          $scope.products = data;
-      });
-      $http.get(REST_API.HOST + REST_API.METHOD.GET_ID + $scope.idProduct).success(function (data) {
-          $scope.product = data;
-      });
+        if (!angular.isUndefined($scope.category)) {
+            if ($scope.category == "Sale_products") {
+                store.getProductsBySale().then(function (data) {
+                    angular.forEach(data, function (product) {
+                        $scope.products.push(product);
+                    })
+                }, function () {
+                    $scope.error = 'unable to get products by sale';
+                });
+            }
+            else {
+                store.getProductsByCategory($scope.category).then(function (data) {
+                    angular.forEach(data, function (product) {
+                        $scope.products.push(product);
+                    })
+                }, function () {
+                    $scope.error = 'unable to get products by category';
+                });
 
-      $scope.orderProp = 'Id';
+                store.getProductsByBrand($scope.category).then(function (data) {
+                    angular.forEach(data, function (product) {                  
+                        $scope.products.push(product);
+                    })
+                }, function () {
+                    $scope.error = 'unable to get products by brand';
+                });
+            }     
+        };
 
-      $scope.addItemToCart = function (item) {
-          try {
-              cart.addProduct(item.Id, item.Name, item.Price, item.Count, item.LinkImage);
-              $scope.$emit('UpdateCart');
-          }
-          catch (err) {
-              $scope.error = "Error when add new product! ";
-          } 
-      }
-    }]);
+        if (!angular.isUndefined($scope.idProduct)) {
+            store.getProductsById($scope.idProduct).then(function (data) {
+                $scope.product = data;
+            }, function () {
+                $scope.error = 'unable to get product by id';
+            });
+
+        };
+
+        
+}]);

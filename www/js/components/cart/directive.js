@@ -1,13 +1,13 @@
-﻿shoppingApp.directive("mycart", function (cart) {
+﻿shoppingApp.directive("mycart",['cartService', function (cart) {
     return {
         restrict: "E",
         templateUrl: "js/components/cart/template.html",
         controller: function ($scope) {
-            $scope.itemCount = 0;
+            $scope.itemCount = cart.totalCount();
             $scope.$on('UpdateCart', function () {
-                $scope.itemCount = cart.count();
+                $scope.itemCount = cart.totalCount();
             });
             
         }
     }
-});
+}]);

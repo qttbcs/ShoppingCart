@@ -23,12 +23,12 @@
     <myfooter></myfooter>
     
 
-    <!-- Angular -->
+    <!-- jquery, Angular -->
+    <script src="lib/jquery/js/jquery.js"></script>
     <script src="lib/Angular/angular.js"></script>
     <script src="lib/Angular/angular-ui-router.js"></script>
 
-    <!-- jquery, Bootstrap -->
-    <script src="lib/jquery/js/jquery.js"></script>
+    <!-- Bootstrap -->    
     <script src="lib/Bootstrap/js/bootstrap.min.js"></script>
 
     <!-- ShoppingCart app -->
@@ -39,12 +39,9 @@
     <script src="js/app.js"></script>
 
     <!--Controller-->
+    <script src="js/pages/home/homeCtrl.js"></script>
     <script src="js/pages/products/productsCtrl.js"></script>
     <script src="js/pages/shopping-cart/cartCtrl.js"></script>
-
-    <!--Common-->
-    <script src="js/common/CustomCtrl.js"></script>
-
 
     <!--Components-->
     <script src="js/components/header/directive.js"></script>
@@ -52,9 +49,14 @@
     <script src="js/components/navigation/directive.js"></script>
     <script src="js/components/cart/directive.js"></script>
     <script src="js/components/left-sidebar/directive.js"></script>
+    <script src="js/components/features_items/directive.js"></script>
+    <script src="js/components/pagination/directive.js"></script>
+    <script src="js/components/product-details/directive.js"></script>
     <script src="js/components/recommended-items/directive.js"></script>
 
     <!--Services-->
-    <script src="js/services/cart.js"></script>
+    <script src="js/services/RestApi/restApiSvc.js"></script>
+    <script src="js/services/cartSvc.js"></script>
+    <script src="js/services/storeSvc.js"></script>
 </body>
 </html>

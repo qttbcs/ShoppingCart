@@ -1,21 +1,22 @@
-﻿shoppingApp.directive("recommendeditems", function () {
+﻿shoppingApp.directive("recommendeditems", ['cartService', function (cart) {
+    cart.loadData();
     return {
         restrict: "E",
         templateUrl: "js/components/recommended-items/template.html",
-        controller: function ($scope) {
-            var item = [];
-            $scope.itemActive = function () {
-                for(var i=0; i<3; i++)
-                {
-                    //var value = function () {
-                    //    value.linkImage = products[i].linkImage;
-                    //    value.Price = products[i].Price;
-                    //    value.Name = products[i].Name;
-                    //}
-                   
+        scope: {
+            data: '=',
+            title: '@'
+        },
+        controller: function ($scope) {        
+            $scope.addItemToCart = function (item) {
+                try {
+                    cart.addProduct(item.Id, item.Name, item.Category, item.Price, item.Count, item.LinkImage);
+                    $scope.$emit('UpdateCart');
                 }
-            }
-           
+                catch (err) {
+                    $scope.error = "Error when add new product! ";
+                }
+            };
         }
     }
-});
+}]);

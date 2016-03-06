@@ -1,0 +1,31 @@
+﻿<div class="product-details">
+    <!--product-details-->
+    <div class="col-sm-5">
+        <div class="view-product">
+            <img src="{{data.LinkImage}}" alt="" />
+        </div>
+    </div>
+    <div class="col-sm-7">
+        <div class="product-information">
+            <!--/product-information-->
+            <img ng-src="assets/images/product-details/{{data.Condition}}.png" class="newarrival" alt="" />
+            <h2>{{data.Name}}</h2>
+            <p>Web ID: {{data.Id}}</p>
+            <img ng-src="assets/images/product-details/rating_{{data.Rating}}.png" alt="" />
+            <span>
+                <span>US ${{data.Price}}</span>
+                <label>Quantity:</label>
+                <input type="number" value="1" min="1" max="10" ng-model="data.Count" />
+                <button ng-click="addItemToCart(data)" type="button" class="btn btn-fefault cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    Add to cart
+                </button>
+            </span>
+            <p><b>Availability:</b> {{data.Availability}}</p>
+            <p><b>Condition:</b> {{data.Condition}}</p>
+            <p><b>Brand:</b> {{data.Brand}}</p>
+            <p><b>Description:</b> {{data.Description}}</p>
+
+        </div><!--/product-information-->
+    </div>
+</div><!--/product-details-->

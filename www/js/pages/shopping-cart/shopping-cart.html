@@ -40,13 +40,13 @@
                     </tr>
 
                     <!-- cart items -->
-                    <tr ng-repeat="item in items">
+                    <tr ng-repeat="item in items track by $index">
                         <td class="cart_product">
-                            <a href=""><img src="{{item.linkImage}}" alt=""></a>
+                            <a ui-sref="productDetail({ category: item.category, idProduct: item.id })"><img src="{{item.linkImage}}" alt=""></a>
                         </td>
                         <td class="cart_description">
-                            <h4><a href="">{{item.name}}</a></h4>
-                            <p>Web ID: {{item.id}}</p>
+                            <h4><a ui-sref="productDetail({ category: item.category, idProduct: item.id })">{{item.name}}</a></h4>
+                            <p>Category: {{item.category}}</p>
                         </td>
                         <td class="cart_price">
                             <p>${{item.price}}</p>
@@ -140,7 +140,7 @@
                         <li>Shipping Cost <span>Free</span></li>
                         <li>Total <span>${{total}}</span></li>
                     </ul>
-                    <a class="btn btn-default update" href="">Clear cart</a>
+                    <a ng-click="clearAll()" class="btn btn-default update" href="">Clear cart</a>
                     <a class="btn btn-default check_out" href="">Check Out</a>
                 </div>
             </div>

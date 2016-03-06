@@ -67,7 +67,17 @@ namespace REST_API_Service.Models
             return _products.AsQueryable();
         }
 
-        public IQueryable<Product> Get(string category)
+        public IQueryable<Product> GetSale()
+        {
+            return _products.FindAll(i => i.Condition == "Sale").AsQueryable();
+        }
+
+        public IQueryable<Product> GetBrand(string brand)
+        {
+            return _products.FindAll(i => i.Brand == brand).AsQueryable();
+        }
+
+        public IQueryable<Product> GetCategory(string category)
         {
             return _products.FindAll(i => i.Category == category).AsQueryable();
         }

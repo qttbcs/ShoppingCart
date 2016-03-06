@@ -12,46 +12,10 @@
             </div>
 
             <div class="col-sm-9 padding-right">
-                <div class="features_items">
-                    <!--features_items-->
-                    <h2 class="title text-center">{{category}}</h2>
-                    <div ng-repeat="product in products">
-                        <div class="col-sm-4">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="{{product.LinkImage}}" alt="" />
-                                        <h2>${{product.Price}}</h2>
-                                        <p>{{product.Name}}</p>
-                                        <a ng-click="addItemToCart(product)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                    <div class="product-overlay">
-                                        <div class="overlay-content">
-                                            <h2>${{product.Price}}</h2>
-                                            <p><a ui-sref="productDetail({ category: product.Category, idProduct: product.Id })">{{product.Name}}</a></p>
-                                            <a ng-click="addItemToCart(product)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                        </div>
-                                    </div>
-                                    <img src="assets/images/home/new.png" class="new" alt="" />
-                                </div>
-                                <div class="choose">
-                                    <ul class="nav nav-pills nav-justified">
-                                        <li><a href=""><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                        <li><a href=""><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <ul class="pagination">
-                            <li class="active"><a href="">1</a></li>
-                            <li><a href="">2</a></li>
-                            <li><a href="">3</a></li>
-                            <li><a href="">&raquo;</a></li>
-                        </ul>
-                    </div>              
-                </div><!--features_items-->
+                <myfeaturesitems title="{{category}}" data="products"></myfeaturesitems>
+                <div class="col-sm-12">
+                    <mypagination></mypagination>
+                </div>                    
             </div>
         </div>
     </div>

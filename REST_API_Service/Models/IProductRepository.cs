@@ -9,11 +9,10 @@ namespace REST_API_Service.Models
     interface IProductRepository
     {
         IQueryable<Product> GetAll();
-
-        IQueryable<Product> Get(string category);
-
+        IQueryable<Product> GetSale();
+        IQueryable<Product> GetBrand(string brand);
+        IQueryable<Product> GetCategory(string category);
         Product Get(int id);
-
         Product Add(Product product);
     }
 }

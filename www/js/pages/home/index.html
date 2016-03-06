@@ -5,46 +5,21 @@
             <div class="col-sm-12">
                 <div id="slider-carousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                        <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#slider-carousel" data-slide-to="1"></li>
-                        <li data-target="#slider-carousel" data-slide-to="2"></li>
+                        <li data-target="#slider-carousel" ng-repeat="category in categories" data-slide-to={{category.Id}} ng-class="{ 'active': $first}"></li>
                     </ol>
 
-                    <div class="carousel-inner">
-                        <div class="item active">
+                    <div class="carousel-inner">                                 
+                        <div class="item" ng-repeat="category in categories" ng-class="{ 'item active': $first}">
                             <div class="col-sm-6">
                                 <h1><span>SHOPPING</span>-CART</h1>
-                                <h2>Free E-Commerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
+                                <h2>{{category.Name}}</h2>
+                                <p>{{category.Description}}</p>
+                                <button ui-sref="productCategory({ category: category.Name })" type="button" class="btn btn-default get">Get more</button>
                             </div>
                             <div class="col-sm-6">
-                                <img src="assets/images/default-image.png" class="banner img-responsive" alt="" />
+                                <img src="{{category.LinkImage}}" class="banner img-responsive" alt="" />
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>SHOPPING</span>-CART</h1>
-                                <h2>100% Responsive Design</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="assets/images/default-image.png" class="banner img-responsive" alt="" />
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-6">
-                                <h1><span>SHOPPING</span>-CART</h1>
-                                <h2>Free Ecommerce Template</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                                <button type="button" class="btn btn-default get">Get it now</button>
-                            </div>
-                            <div class="col-sm-6">
-                                <img src="assets/images/default-image.png" class="banner img-responsive" alt="" />
-                            </div>
-                        </div>
-
                     </div>
 
                     <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
@@ -67,26 +42,7 @@
                 <myleftsidebar></myleftsidebar>
             </div>
 
-            <div class="col-sm-9 padding-right">
-                <div class="Welcome">
-                    <!--Welcome-->
-                    <h2 class="title text-center">Welcome to our store</h2>
-
-                    <div class="content-welcome">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Vestibulum tincidunt et ligula eu condimentum. Donec at velit a lorem ullamcorper ultrices eu ac turpis.
-                            Donec ut tempor dolor. Nam vestibulum mauris est, et dapibus lectus aliquet hendrerit.
-                            Quisque feugiat hendrerit eleifend. Praesent ut leo id purus eleifend mattis.
-                            Donec ultrices metus a quam tempor efficitur et sit amet mi.
-                            Suspendisse mi enim, efficitur malesuada viverra ac, malesuada at nisi. Ut mattis imperdiet porttitor.
-                            Integer a lacus in neque rhoncus pretium id pulvinar ex. Aliquam erat volutpat.
-                            Duis fringilla nulla vitae euismod finibus.
-                        </p>
-                        <p>Integer congue orci enim, vitae sagittis odio gravida et. Ut volutpat quam et turpis gravida posuere. In accumsan efficitur diam.</p>
-                    </div>
-                </div><!--/Welcome-->
-
+            <div class="col-sm-9 padding-right">        
                 <div class="features_brands">
                     <!--features_brands-->
                     <h2 class="title text-center">features brands</h2>
@@ -99,7 +55,7 @@
                                         <div class="single-products">
                                             <div class="productinfo text-center">
                                                 <img src="assets/images/home/manufacturer_apple.jpg" alt="" />
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-cog"></i>Apple</a>
+                                                <a ui-sref="productCategory({ category: 'Apple' })" class="btn btn-default add-to-cart"><i class="fa fa-cog"></i>Apple</a>
                                             </div>
 
                                         </div>
@@ -173,262 +129,7 @@
                     </div>
                 </div><!--/features_brands-->
 
-                <div class="features_items">
-                    <!--features_items-->
-                    <h2 class="title text-center">Features Items</h2>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="assets/images/default-image.png" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="assets/images/default-image.png" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="assets/images/default-image.png" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="assets/images/default-image.png" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                                <img src="images/home/new.png" class="new" alt="" />
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="assets/images/default-image.png" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                                <img src="images/home/sale.png" class="new" alt="" />
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="product-image-wrapper">
-                            <div class="single-products">
-                                <div class="productinfo text-center">
-                                    <img src="assets/images/default-image.png" alt="" />
-                                    <h2>$56</h2>
-                                    <p>Easy Polo Black Edition</p>
-                                    <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                </div>
-                                <div class="product-overlay">
-                                    <div class="overlay-content">
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="choose">
-                                <ul class="nav nav-pills nav-justified">
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to wishlist</a></li>
-                                    <li><a href="#"><i class="fa fa-plus-square"></i>Add to compare</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div><!--features_items-->
-
-                <div class="recommended_items">
-                    <!--recommended_items-->
-                    <h2 class="title text-center">News</h2>
-
-                    <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="assets/images/default-image.png" alt="" />
-                                                <h2>New online store is open!</h2>
-                                                <p>The new ShoppingCart store is open now! We are very excited to offer our new range of products. We will be constantly adding to our range so please register on our site.</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Details</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="assets/images/default-image.png" alt="" />
-                                                <h2>Products new release!</h2>
-                                                <p>nopCommerce includes everything you need to begin your e-commerce online store. We have thought of everything and it's all included! nopCommerce is a fully customizable shopping cart</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Details</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="assets/images/default-image.png" alt="" />
-                                                <h2>About Shopping Cart</h2>
-                                                <p>It's stable and highly usable. From downloads to documentation, www.ShoppingCart.com offers a comprehensive base of information, resources, and support to the Commerce community.</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Details</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="assets/images/default-image.png" alt="" />
-                                                <h2>New online store is open!</h2>
-                                                <p>The new ShoppingCart store is open now! We are very excited to offer our new range of products. We will be constantly adding to our range so please register on our site.</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Details</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="assets/images/default-image.png" alt="" />
-                                                <h2>Products new release!</h2>
-                                                <p>nopCommerce includes everything you need to begin your e-commerce online store. We have thought of everything and it's all included! nopCommerce is a fully customizable shopping cart</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Details</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="product-image-wrapper">
-                                        <div class="single-products">
-                                            <div class="productinfo text-center">
-                                                <img src="assets/images/default-image.png" alt="" />
-                                                <h2>About Shopping Cart</h2>
-                                                <p>It's stable and highly usable. From downloads to documentation, www.ShoppingCart.com offers a comprehensive base of information, resources, and support to the Commerce community.</p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-plus-square"></i>Details</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </div>
-                </div><!--/recommended_items-->
-
+                <myfeaturesitems title="Sale_products" data="productsBySale"></myfeaturesitems>           
             </div>
         </div>
     </div>

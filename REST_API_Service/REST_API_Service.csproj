@@ -112,22 +112,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="images\category_accessories.jpg" />
+    <Content Include="images\category_8.jpg" />
     <Content Include="images\category_apparel.jpeg" />
     <Content Include="images\category_apparel_accessories.jpg" />
-    <Content Include="images\category_book.jpeg" />
-    <Content Include="images\category_camera_photo.jpeg" />
-    <Content Include="images\category_cell_phones.jpeg" />
-    <Content Include="images\category_clothing.jpeg" />
+    <Content Include="images\category_10.jpeg" />
+    <Content Include="images\category_3.jpeg" />
+    <Content Include="images\category_4.jpeg" />
+    <Content Include="images\category_7.jpeg" />
     <Content Include="images\category_computers.jpeg" />
-    <Content Include="images\category_desktops.jpg" />
-    <Content Include="images\category_digital_downloads.jpeg" />
-    <Content Include="images\category_electronics.jpeg" />
-    <Content Include="images\category_gift_cards.jpeg" />
-    <Content Include="images\category_jewelry.jpeg" />
-    <Content Include="images\category_notebooks.jpg" />
-    <Content Include="images\category_shoes.jpeg" />
-    <Content Include="images\category_software.jpg" />
+    <Content Include="images\category_0.jpg" />
+    <Content Include="images\category_9.jpeg" />
+    <Content Include="images\category_5.jpeg" />
+    <Content Include="images\category_12.jpeg" />
+    <Content Include="images\category_11.jpeg" />
+    <Content Include="images\category_1.jpg" />
+    <Content Include="images\category_6.jpeg" />
+    <Content Include="images\category_2.jpg" />
     <Content Include="images\manufacturer_apple.jpg" />
     <Content Include="images\manufacturer_hp.jpg" />
     <Content Include="images\manufacturer_nike.jpg" />
@@ -193,10 +193,15 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\CategoryRepository.cs" />
+    <Compile Include="Models\ICategoryRepository.cs" />
     <Compile Include="Models\IProductRepository.cs" />
     <Compile Include="Models\SyndicationFeedFormatter.cs" />
     <Compile Include="Models\Product.cs" />
