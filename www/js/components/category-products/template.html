@@ -1,0 +1,82 @@
+﻿<div class="panel-group category-products" id="accordian">
+    <!--category-productsr-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordian" ng-click="getCollapse('#computers')">
+                    <span class="badge pull-right"><i ng-class="getStateCollapse('#computers')"></i></span>
+                    Computers
+                </a>
+            </h4>
+        </div>
+        <div id="computers" class="panel-collapse collapse">
+            <div class="panel-body">
+                <ul>
+                    <li><a ui-sref="productCategory({ category: 'Desktops' })">Desktops </a></li>
+                    <li><a ui-sref="productCategory({ category: 'Notebooks' })">Notebooks </a></li>
+                    <li><a ui-sref="productCategory({ category: 'Software' })">Software </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordian" ng-click="getCollapse('#electronics')">
+                    <span class=" badge pull-right">
+                        <i ng-class="getStateCollapse('#electronics')"></i>
+                    </span>
+                    Electronics
+                </a>
+            </h4>
+        </div>
+        <div id="electronics" class="panel-collapse collapse">
+            <div class="panel-body">
+                <ul>
+                    <li><a ui-sref="productCategory({ category: 'Camera' })">Camera</a></li>
+                    <li><a ui-sref="productCategory({ category: 'CellPhones' })">Cell phones</a></li>
+                    <li><a ui-sref="productCategory({ category: 'Others' })">Others</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordian" ng-click="getCollapse('#apparel')">
+                    <span class="badge pull-right"><i ng-class="getStateCollapse('#apparel')"></i></span>
+                    Apparel
+                </a>
+            </h4>
+        </div>
+        <div id="apparel" class="panel-collapse collapse">
+            <div class="panel-body">
+                <ul>
+                    <li><a ui-sref="productCategory({ category: 'Shoes' })">Shoes</a></li>
+                    <li><a ui-sref="productCategory({ category: 'Clothing' })">Clothing</a></li>
+                    <li><a ui-sref="productCategory({ category: 'Accessories' })">Accessories</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a ui-sref="productCategory({ category: 'Digital' })">Digital downloads</a></h4>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a ui-sref="productCategory({ category: 'Books' })">Books</a></h4>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a ui-sref="productCategory({ category: 'Jewelry' })">Jewelry</a></h4>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title"><a ui-sref="productCategory({ category: 'GiftCards' })">Gift Cards</a></h4>
+        </div>
+    </div>
+</div><!--/category-products-->

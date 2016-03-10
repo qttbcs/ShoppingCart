@@ -5,12 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-2">
-                    <div class="currency-selector">
-                        <select name="customerCurrency" onchange="setLocation(this.value);">
-                            <option selected="selected" value="/changecurrency/1?returnurl=%2fcomputers">US Dollar</option>
-                            <option value="/changecurrency/6?returnurl=%2fcomputers">Euro</option>
-                        </select>
-                    </div>
+                    <currencyselector></currencyselector>
                 </div>
                 <div class="col-sm-10">
                     <div class="shop-menu pull-right">
@@ -46,9 +41,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6">
-                    <div class="search_box pull-right">
-                        <input type="text" placeholder="Search store" />
-                    </div>
+                    <searchbox></searchbox>
                 </div>
             </div>
         </div>

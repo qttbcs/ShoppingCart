@@ -1,104 +1,10 @@
 ﻿<div class="left-sidebar">
     <h2>Categories</h2>
-    <div class="panel-group category-products" id="accordian">
-        <!--category-productsr-->
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordian" href="#computers">
-                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                        Computers
-                    </a>
-                </h4>
-            </div>
-            <div id="computers" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a ui-sref="productCategory({ category: 'Desktops' })">Desktops </a></li>
-                        <li><a ui-sref="productCategory({ category: 'Notebooks' })">Notebooks </a></li>
-                        <li><a ui-sref="productCategory({ category: 'Software' })">Software </a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordian" href="#electronics">
-                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                        Electronics
-                    </a>
-                </h4>
-            </div>
-            <div id="electronics" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a ui-sref="productCategory({ category: 'Camera' })">Camera</a></li>
-                        <li><a ui-sref="productCategory({ category: 'CellPhones' })">Cell phones</a></li>
-                        <li><a ui-sref="productCategory({ category: 'Others' })">Others</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordian" href="#apparel">
-                        <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                        Apparel
-                    </a>
-                </h4>
-            </div>
-            <div id="apparel" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <ul>
-                        <li><a ui-sref="productCategory({ category: 'Shoes' })">Shoes</a></li>
-                        <li><a ui-sref="productCategory({ category: 'Clothing' })">Clothing</a></li>
-                        <li><a ui-sref="productCategory({ category: 'Accessories' })">Accessories</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title"><a ui-sref="productCategory({ category: 'Digital' })">Digital downloads</a></h4>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title"><a ui-sref="productCategory({ category: 'Books' })">Books</a></h4>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title"><a ui-sref="productCategory({ category: 'Jewelry' })">Jewelry</a></h4>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title"><a ui-sref="productCategory({ category: 'GiftCards' })">Gift Cards</a></h4>
-            </div>
-        </div>
-    </div><!--/category-products-->
 
-    <div class="brands_products">
-        <!--brands_products-->
-        <h2>Manufacturers</h2>
-        <div class="brands-name">
-            <ul class="nav nav-pills nav-stacked">
-                <li><a href="#"> <span class="pull-right">(2)</span>Apple</a></li>
-                <li><a href="#"> <span class="pull-right">(2)</span>HP</a></li>
-                <li><a href="#"> <span class="pull-right">(3)</span>Nike</a></li>
-            </ul>
-        </div>
-    </div><!--/brands_products-->
+    <categoryproducts></categoryproducts>
 
-    <div class="price-range">
-        <!--price-range-->
-        <h2>Price Range</h2>
-        <div class="well text-center">
-            <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2"><br />
-            <b class="pull-left">$ 0</b> <b class="pull-right">$ 600</b>
-        </div>
-    </div><!--/price-range-->
+    <brandsproducts></brandsproducts>
+
+    <pricerange></pricerange>
+ 
 </div>

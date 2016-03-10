@@ -1,0 +1,10 @@
+﻿<div class="brands_products">
+    <!--brands_products-->
+    <h2 ng-click="setStateBrands()">Brands</h2>
+    <div class="brands-name" ng-show="stateBrands">
+        <ul class="nav nav-pills nav-stacked">
+            <li ng-repeat="brand in brands"><a ui-sref="productCategory({ category: brand.Name })"> <span class="pull-right">({{brand.Stock}})</span>{{brand.Name}}</a></li>
+        </ul>
+    </div>
+    
+</div><!--/brands_products-->

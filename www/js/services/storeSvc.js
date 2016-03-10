@@ -1,30 +1,39 @@
 ﻿angular.module("storeSvc", ["restApiSvc"])
-    .factory("storeService", ["REST_API", "$http", function (REST_API, $http) {       
-        return {          
-            getAllCategories: function(){
-                return $http.get(REST_API.HOST + REST_API.METHOD.GET_ALL_CATEGORIES).then(function (response) {
-                    return response.data;
-                });
+    .factory("storeService", ["REST_API", "$http", "$q", function (REST_API, $http, $q) {
+        function getApi(linkApi) {
+            var deferred = $q.defer();
+            $http({
+                method: 'GET',
+                url: linkApi
+            }).success(function (data) {
+                deferred.resolve(data);
+            }).error(function (err) {
+                deferred.reject(err);
+            });
+            return deferred.promise;
+        };
+
+        return {
+            getAllBrands: function () {
+                return getApi(REST_API.HOST + REST_API.METHOD.GET_ALL_BRANDS);
+            },
+            getAllCategories: function(){           
+                return getApi(REST_API.HOST + REST_API.METHOD.GET_ALL_CATEGORIES);
+            },
+            getAllProducts: function () {
+                return getApi(REST_API.HOST + REST_API.METHOD.GET_ALL_PRODUCTS);
             },
             getProductsBySale: function () {
-                return $http.get(REST_API.HOST + REST_API.METHOD.GET_SALE).then(function (response) {
-                    return response.data;
-                });
+                return getApi(REST_API.HOST + REST_API.METHOD.GET_SALE);              
             },
             getProductsByBrand: function (brand) {
-                return $http.get(REST_API.HOST + REST_API.METHOD.GET_BRAND + brand).then(function (response) {
-                    return response.data;
-                });
+                return getApi(REST_API.HOST + REST_API.METHOD.GET_BRAND + brand);
             },
             getProductsByCategory: function (category) {
-                return $http.get(REST_API.HOST + REST_API.METHOD.GET_CATEGORY + category).then(function (response) {
-                    return response.data;
-                });
+                return getApi(REST_API.HOST + REST_API.METHOD.GET_CATEGORY + category);
             },
             getProductsById: function (id) {
-                return $http.get(REST_API.HOST + REST_API.METHOD.GET_ID + id).then(function (response) {
-                    return response.data;
-                });           
+                return getApi(REST_API.HOST + REST_API.METHOD.GET_ID + id);       
             }
         }
     }]);

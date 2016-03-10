@@ -1,0 +1,36 @@
+﻿<section id="slider">
+    <!--slider-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="slider-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider-carousel" ng-repeat="category in data" data-slide-to={{category.Id}} ng-class="{ 'active': $first}"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item" ng-repeat="category in data" ng-class="{ 'item active': $first}">
+                            <div class="col-sm-6">
+                                <h1><span>SHOPPING</span>-CART</h1>
+                                <h2>{{category.Name}}</h2>
+                                <p>{{category.Description}}</p>
+                                <button ui-sref="productCategory({ category: category.Name })" type="button" class="btn btn-default get">Get more</button>
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="{{category.LinkImage}}" class="banner img-responsive" alt="" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <a ng-click="goPrev()" class="left control-carousel hidden-xs" data-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a ng-click="goNext()" class="right control-carousel hidden-xs" data-slide="next">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section><!--/slider-->

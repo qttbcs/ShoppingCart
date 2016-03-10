@@ -49,7 +49,7 @@
                             <p>Category: {{item.category}}</p>
                         </td>
                         <td class="cart_price">
-                            <p>${{item.price}}</p>
+                            <p>{{item.price|customCurrency}}</p>
                         </td>
                         <td class="cart_quantity">
                             <div class="cart_quantity_button">
@@ -59,7 +59,7 @@
                             </div>
                         </td>
                         <td class="cart_total">
-                            <p class="cart_total_price">${{item.count * item.price}}</p>
+                            <p class="cart_total_price">{{item.count * item.price|customCurrency}}</p>
                         </td>
                         <td class="cart_delete">
                             <a ng-click="delete()" class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
@@ -75,74 +75,22 @@
     <div class="container">
         <div class="heading">
             <h3>What would you like to do next?</h3>
-            <p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+            <p>Ut volutpat quam et turpis gravida posuere. In accumsan efficitur diam.</p>
         </div>
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="chose_area">
-                    <ul class="user_option">
-                        <li>
-                            <input type="checkbox">
-                            <label>Use Coupon Code</label>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <label>Use Gift Voucher</label>
-                        </li>
-                        <li>
-                            <input type="checkbox">
-                            <label>Estimate Shipping & Taxes</label>
-                        </li>
-                    </ul>
-                    <ul class="user_info">
-                        <li class="single_field">
-                            <label>Country:</label>
-                            <select>
-                                <option>United States</option>
-                                <option>Bangladesh</option>
-                                <option>UK</option>
-                                <option>India</option>
-                                <option>Pakistan</option>
-                                <option>Ucrane</option>
-                                <option>Canada</option>
-                                <option>Dubai</option>
-                            </select>
-
-                        </li>
-                        <li class="single_field">
-                            <label>Region / State:</label>
-                            <select>
-                                <option>Select</option>
-                                <option>Dhaka</option>
-                                <option>London</option>
-                                <option>Dillih</option>
-                                <option>Lahore</option>
-                                <option>Alaska</option>
-                                <option>Canada</option>
-                                <option>Dubai</option>
-                            </select>
-
-                        </li>
-                        <li class="single_field zip-field">
-                            <label>Zip Code:</label>
-                            <input type="text">
-                        </li>
-                    </ul>
-                    <a class="btn btn-default update" href="">check out using PayPal</a>
-                    <a class="btn btn-default check_out" href="">check out using Google</a>
-                </div>
-            </div>
+        <div class="row">           
             <div class="col-sm-6">
                 <div class="total_area">
                     <ul>
-                        <li>Cart Sub Total <span>${{total}}</span></li>
+                        <li>Cart Sub Total <span>{{total|customCurrency}}</span></li>
                         <li>Eco Tax <span>Free</span></li>
                         <li>Shipping Cost <span>Free</span></li>
-                        <li>Total <span>${{total}}</span></li>
+                        <li>Total <span>{{total|customCurrency}}</span></li>
                     </ul>
-                    <a ng-click="clearAll()" class="btn btn-default update" href="">Clear cart</a>
-                    <a class="btn btn-default check_out" href="">Check Out</a>
+                    <a ng-click="clearAll()" class="btn btn-default update" href="">Clear cart</a>                   
                 </div>
+            </div>
+            <div class="col-sm-6" ng-show="itemCount > 0">
+                <mycheckout></mycheckout>
             </div>
         </div>
     </div>

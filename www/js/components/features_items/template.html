@@ -1,19 +1,19 @@
 ﻿<div class="features_items">
     <!--features_items-->
-    <h2 class="title text-center" ng-bind="title"></h2>
-    <div ng-repeat="product in data">
+    <h2 class="title text-center" ng-bind="title"></h2>  
+    <div dir-paginate="product in data | customFilter | itemsPerPage: pageSize" current-page="currentPage">
         <div class="col-sm-4">
             <div class="product-image-wrapper">
                 <div class="single-products">
                     <div class="productinfo text-center">
                         <img src="{{product.LinkImage}}" alt="" />
-                        <h2>${{product.Price}}</h2>
+                        <h2>{{product.Price|customCurrency}}</h2>
                         <p>{{product.Name}}</p>
                         <a class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                     </div>
                     <div class="product-overlay">
                         <div class="overlay-content">
-                            <h2>${{product.Price}}</h2>
+                            <h2>{{product.Price|customCurrency}}</h2>
                             <a ui-sref="productDetail({ category: title, idProduct: product.Id })"><p>{{product.Name}}</p></a>
                             <a ng-click="addItemToCart(product)" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
                         </div>
@@ -29,4 +29,7 @@
             </div>
         </div>
     </div>
+    <div class="col-sm-12">
+        <dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="lib/Angular/directives/pagination/dirPagination.tpl.html"></dir-pagination-controls>
+    </div>   
 </div><!--features_items-->

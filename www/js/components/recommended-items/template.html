@@ -3,25 +3,29 @@
     <h2 class="title text-center" ng-bind="title"></h2>
     <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="item" ng-repeat="product in data" ng-if="$index <= (data.length-1)/3" ng-class="{ 'item active': $first}" ng-init="outerIndex = $index*3">
-                <div class="col-sm-4" ng-repeat="product in data" ng-if="$index >= outerIndex && $index < outerIndex+3">
+            <div class="item" ng-repeat="item in data" ng-if="$index <= (data.length-1)/3" ng-class="{ 'item active': $first}" ng-init="outerIndex = $index*3">
+                <div class="col-sm-4" ng-repeat="item in data" ng-if="$index >= outerIndex && $index < outerIndex+3">
                     <div class=" product-image-wrapper">
                         <div class="single-products">
-                            <div class="productinfo text-center">
-                                <img src="{{product.LinkImage}}" alt="" />
-                                <h2>${{product.Price}}</h2>
-                                <a ui-sref="productDetail({ category: title, idProduct: product.Id })"><p>{{product.Name}}</p></a>
-                                <button type="button" class="btn btn-default add-to-cart" ng-click="addItemToCart(product)"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                            <div class="productinfo text-center" ng-show="isProduct()">
+                                <img src="{{item.LinkImage}}" alt="" />
+                                <h2>{{item.Price|customCurrency}}</h2>
+                                <a ui-sref="productDetail({ category: title, idProduct: item.Id })"><p>{{item.Name}}</p></a>
+                                <button type="button" class="btn btn-default add-to-cart" ng-click="addItemToCart(item)"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                            </div>
+                            <div class="productinfo text-center" ng-show="isBrand()">
+                                <img src="{{item.LinkImage}}" alt="" />
+                                <a ui-sref="productCategory({ category: item.Name })" class="btn btn-default add-to-cart"><i class="fa fa-cog"></i>{{item.Name}}</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+        <a class="left recommended-item-control"  ng-click="goPrev()" data-slide="prev">
             <i class="fa fa-angle-left"></i>
         </a>
-        <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+        <a class="right recommended-item-control" ng-click="goNext()" data-slide="next">
             <i class="fa fa-angle-right"></i>
         </a>
     </div>

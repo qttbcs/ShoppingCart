@@ -1,10 +1,10 @@
 
 'use strict';
 
-var shoppingApp = angular.module('shoppingApp', ['ui.router', 'cartSvc','storeSvc']);
+var shoppingApp = angular.module('shoppingApp', ['ui.router', 'ui-rangeSlider', 'pagination', 'filterSvc', 'cartSvc', 'storeSvc']);
 shoppingApp.config(function ($stateProvider, $urlRouterProvider) {
-    //$urlRouterProvider.otherwise('/home');
-    $urlRouterProvider.when('', '/home');
+    $urlRouterProvider.otherwise('/home');
+    //$urlRouterProvider.when('', '/home');
     $stateProvider
         .state('home', {
             url: '/home',
@@ -31,4 +31,15 @@ shoppingApp.config(function ($stateProvider, $urlRouterProvider) {
 
         })
 })
+shoppingApp.filter('customCurrency', ['filterService',function (filter) {
+    return function (input) {
+        return filter.customCurrency(input);
+               
+    }  
+}]);
+shoppingApp.filter('customFilter', ['filterService', function (filter) {
+    return function (input) {
+        return filter.customFilter(input);
 
+    }
+}]);

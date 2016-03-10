@@ -13,7 +13,7 @@
             <p>Web ID: {{data.Id}}</p>
             <img ng-src="assets/images/product-details/rating_{{data.Rating}}.png" alt="" />
             <span>
-                <span>US ${{data.Price}}</span>
+                <span>{{data.Price|customCurrency}}</span>
                 <label>Quantity:</label>
                 <input type="number" value="1" min="1" max="10" ng-model="data.Count" />
                 <button ng-click="addItemToCart(data)" type="button" class="btn btn-fefault cart">

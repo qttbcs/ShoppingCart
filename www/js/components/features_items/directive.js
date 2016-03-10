@@ -5,10 +5,11 @@
         templateUrl: "js/components/features_items/template.html",
         scope: {
             data: '=',
-            title: '@'
-            
+            title: '@'      
         },
         controller: function ($scope) {
+            $scope.currentPage = 1;
+            $scope.pageSize = 6;
             $scope.addItemToCart = function (item) {
                 try {
                     cart.addProduct(item.Id, item.Name, item.Category, item.Price, item.Count, item.LinkImage);

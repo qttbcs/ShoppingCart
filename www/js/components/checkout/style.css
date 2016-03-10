@@ -1,0 +1,86 @@
+.form_checkout {
+  background-color: #B2D1E5;
+}
+.form-container {
+  width: 100%;
+  margin-left:10px;
+}
+.personal-information {
+  background-color: #3C8DC5;
+  color: #fff;
+  padding: 1px 0px;
+  text-align: center;
+}
+.form_checkout h1 {
+  font-size: 1.3em;
+  font-family: "Roboto"
+}
+.form_checkout input {
+  margin-top: 2px;
+  width:100%;
+}
+.form_checkout input[type="text"]{
+  display: block;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+}
+.form_checkout input[type="email"]{
+  display: block;
+  height: 30px;
+  padding-left: 10px;
+  border: none;
+}
+.form_checkout input[type="submit"]{
+  display: block;
+  height: 40px;
+  border: none;
+  background-color: #3C8DC5;
+  color: #fff;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.form_checkout input[type="submit"]:hover{
+  background-color: #6FB7E9;
+  transition: 0.3s ease;
+}
+#column-left {
+  width: 49%;
+  float: left;
+  margin-bottom: 2px;
+}
+#column-right {
+  width: 49%;
+  float: right;
+}
+
+@media (max-width: 480px){
+  .form_checkout h1 {
+    font-size: 1.2em;
+  }
+  #input-field {
+    width: 100%;
+  }
+  .form_checkout input[type="text"]{
+  height: 40px;
+  }
+  .form_checkout input[type="email"]{
+  height: 40px;
+  }
+  .form_checkout input[type="submit"]{
+  height: 50px;
+  }
+  #column-left {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+  #column-right {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+  #input-button {
+    width: 100%;
+  }
+}

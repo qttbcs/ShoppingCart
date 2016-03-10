@@ -1487,7 +1487,7 @@ h2.title {
   padding-bottom: 18px !important;
 }
 
-#do_action .total_area, #do_action .chose_area {
+#do_action .total_area, #do_action .form_checkout {
   border: 1px solid #E6E4DF;
   color: #696763;
   padding: 30px 25px 30px 0;
@@ -1561,7 +1561,7 @@ h2.title {
 }
 
 
-.chose_area .update {
+.form_checkout .update {
   margin-left: 40px;
 }
 

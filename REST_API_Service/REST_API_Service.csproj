@@ -112,6 +112,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="images\brand_10.jpg" />
+    <Content Include="images\brand_12.jpg" />
+    <Content Include="images\brand_13.jpg" />
+    <Content Include="images\brand_14.jpg" />
+    <Content Include="images\brand_2.jpg" />
+    <Content Include="images\brand_3.jpg" />
+    <Content Include="images\brand_4.jpg" />
+    <Content Include="images\brand_5.jpg" />
+    <Content Include="images\brand_6.jpg" />
+    <Content Include="images\brand_7.jpg" />
+    <Content Include="images\brand_8.jpg" />
+    <Content Include="images\brand_9.jpg" />
     <Content Include="images\category_8.jpg" />
     <Content Include="images\category_apparel.jpeg" />
     <Content Include="images\category_apparel_accessories.jpg" />
@@ -128,9 +140,9 @@
     <Content Include="images\category_1.jpg" />
     <Content Include="images\category_6.jpeg" />
     <Content Include="images\category_2.jpg" />
-    <Content Include="images\manufacturer_apple.jpg" />
-    <Content Include="images\manufacturer_hp.jpg" />
-    <Content Include="images\manufacturer_nike.jpg" />
+    <Content Include="images\brand_0.jpg" />
+    <Content Include="images\brand_1.jpg" />
+    <Content Include="images\brand_11.jpg" />
     <Content Include="images\product_0.jpeg" />
     <Content Include="images\product_1.jpeg" />
     <Content Include="images\product_10.jpeg" />
@@ -193,14 +205,17 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BrandController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\BrandRepository.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryRepository.cs" />
+    <Compile Include="Models\IBrandRepository.cs" />
     <Compile Include="Models\ICategoryRepository.cs" />
     <Compile Include="Models\IProductRepository.cs" />
     <Compile Include="Models\SyndicationFeedFormatter.cs" />
