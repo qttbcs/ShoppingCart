@@ -89,8 +89,8 @@
                     <a ng-click="clearAll()" class="btn btn-default update" href="">Clear cart</a>                   
                 </div>
             </div>
-            <div class="col-sm-6" ng-show="itemCount > 0">
-                <mycheckout></mycheckout>
+            <div class="col-sm-6">
+                <mycheckout data="items" when-select="clearAll()" item-count="itemCount"></mycheckout>
             </div>
         </div>
     </div>

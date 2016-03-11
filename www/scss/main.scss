@@ -2,5 +2,9 @@
 /*@import "www/scss/common";*/
 
 // Include specific styles of each view
+@import "scss/views/cart";
 @import "scss/views/home";
 @import "scss/views/product";
+@import "scss/responsive";
+@import "scss/reset";
+

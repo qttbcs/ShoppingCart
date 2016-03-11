@@ -13,6 +13,20 @@
             return deferred.promise;
         };
 
+        function postApi(linkApi,myData) {
+            var deferred = $q.defer();
+            $http({
+                method: 'POST',
+                url: linkApi,
+                data: myData
+            }).success(function (data) {
+                deferred.resolve(data);
+            }).error(function (err) {
+                deferred.reject(err);
+            });
+            return deferred.promise;
+        };
+
         return {
             getAllBrands: function () {
                 return getApi(REST_API.HOST + REST_API.METHOD.GET_ALL_BRANDS);
@@ -34,6 +48,9 @@
             },
             getProductsById: function (id) {
                 return getApi(REST_API.HOST + REST_API.METHOD.GET_ID + id);       
+            },
+            setOrder: function (myData) {
+                return postApi(REST_API.HOST + REST_API.METHOD.POST_ORDER, myData);
             }
         }
     }]);

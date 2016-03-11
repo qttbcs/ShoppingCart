@@ -1,0 +1,15 @@
+﻿.search_box input {
+  background: #F0F0E9;
+  border: medium none;
+  color: #42C0FB;
+  font-family: 'roboto';
+  font-size: 14px;
+  font-weight: 300;
+  height: 40px;
+  outline: medium none;
+  padding-left: 10px;
+  width: 247px;
+  background-image: url(image/searchicon.png);
+  background-repeat: no-repeat;
+  background-position:right center;
+}

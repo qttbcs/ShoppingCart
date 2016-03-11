@@ -1,45 +1,43 @@
 ﻿<link rel="stylesheet" href="/js/components/checkout/style.css">
-<form class="form_checkout">
+<form class="form_checkout" ng-show="itemCount > 0">
     <div class="form-container">
         <div class="personal-information">
             <h1>Payment Information</h1>
         </div> <!-- end of personal-information -->
-        <input id="input-field" type="text" ng-model="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address" />
-        <input id="column-left" type="text" ng-model="city" required="required" autocomplete="on" maxlength="20" placeholder="City" />
-        <input id="column-right" type="text" ng-model="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code" />
+        <input id="input-field" type="text" ng-model="newOrder.StreetAddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address" />
+        <input id="column-left" type="text" ng-model="newOrder.City" required="required" autocomplete="on" maxlength="20" placeholder="City" />
+        <input id="column-right" type="text" ng-model="newOrder.Zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code" />
 
-        <input id="input-field" type="email" ng-model="email" required="required" autocomplete="on" maxlength="40" placeholder="Email" />
+        <input id="input-field" type="email" ng-model="newOrder.Email" required="required" autocomplete="on" maxlength="40" placeholder="Email" />
 
-        <input id="column-left" type="text" ng-model="firstName" placeholder="First Name" />
+        <input id="column-left" type="text" ng-model="newOrder.FirstName" required="required" autocomplete="on" placeholder="First Name" />
 
-        <input id="column-right" type="text" ng-model="lastName" placeholder="Surname" />
+        <input id="column-right" type="text" ng-model="newOrder.LastName" required="required" autocomplete="on" placeholder="Surname" />
 
-        <input id="input-field" type="text" ng-model="number" placeholder="Card Number" />
+        <input id="input-field" type="text" ng-model="newOrder.CardNumber" required="required" pattern="[0-9]*" placeholder="Card Number" />
 
-        <input id="column-left" type="text" ng-model="expiry" placeholder="MM / YY" />
+        <input id="column-left" type="text" ng-model="newOrder.Expiry" required="required" placeholder="MM / YY" />
 
-        <input id="column-right" type="text" ng-model="cvc" placeholder="CCV" />
+        <input id="column-right" type="text" ng-model="newOrder.CCV" required="required" pattern="[0-9]*" maxlength="4" placeholder="CCV" />
 
         <input id="input-button" ng-click="setOrder()" type="submit" value="Check Out" />
     </div>
 </form>
 <!-- end of form-container -->
 
-<div class="modal fade" id="my-notice"role="dialog">
+<div class="modal fade" id="my-notice" role="dialog" ng-click="resetCart()">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-body">
                 <div class="row">
-                    <div class="col-md-4">.col-md-4</div>
-                    <div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+                    {{notice}}
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
             </div>
         </div>
-        
+
     </div>
 </div>
 

@@ -8,6 +8,8 @@
             "GET_SALE": "getSale",
             "GET_BRAND": "getBrand/",
             "GET_CATEGORY": "getCategory/",
-            "GET_ID": "getId/"
+            "GET_ID": "getId/",
+            "POST_ORDER": "order/"
+
         }
     });

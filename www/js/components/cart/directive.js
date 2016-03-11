@@ -1,4 +1,5 @@
-﻿shoppingApp.directive("mycart",['cartService', function (cart) {
+﻿shoppingApp.directive("mycart", ['cartService', function (cart) {
+    cart.loadData();
     return {
         restrict: "E",
         templateUrl: "js/components/cart/template.html",
