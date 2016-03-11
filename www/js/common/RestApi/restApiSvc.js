@@ -1,6 +1,6 @@
 ﻿angular.module("restApiSvc", [])
     .constant("REST_API", {
-        "HOST": "http://localhost:35819/api/",
+        "HOST": "http://wferestapiservice.azurewebsites.net/api/",
         "METHOD": {
             "GET_ALL_BRANDS": "brand",
             "GET_ALL_CATEGORIES": "category",
